@@ -6,6 +6,18 @@ array.map{|i| i * -1}
   end
 end
 
+# def map_to_negativize(source_array)
+#   this is an alternative method
+#   new = []
+#   i = 0
+#   while i < source_array.length do
+#     new.push( source_array[i] * -1 ) # <== Unique work
+#     i += 1
+#   end
+#   return new
+# end
+
+
 
 def map_to_no_change(array)
   #this array simply goes every every value and returns the exact same array as before
@@ -13,17 +25,51 @@ array = ["paul","gurney", "vladimir", "jessica", "chani"]
 array.map{|i| i }
 end
 
+# def map_to_no_change(source_array)
+#   this is an alternative method
+#   new = []
+#   i = 0
+#   while i < source_array.length do
+#     new.push( source_array[i] ) # <== Unique work
+#     i += 1
+#   end
+#   return new
+# end
+
+
 def map_to_double(array)
   #this method doubles all of the numbers in the array
 array = [1,2,3, -9]
 array.map{|i| i * 2}
 end
 
+# def map_to_double(source_array)
+#   new = []
+#   i = 0
+#   while i < source_array.length do
+#     new.push( source_array[i] * 2 ) # <== Unique work
+#     i += 1
+#   end
+#   return new
+# end
+
+
 def map_to_square(array)
   #this method squares all the numbers in the array
   array = [1,2,3, -9]
   array.map{|i| i **2}
 end
+
+# def map_to_square(source_array)
+#   new = []
+#   i = 0
+#   while i < source_array.length do
+#     new.push( source_array[i] * source_array[i] ) # <== Unique work
+#     i += 1
+#   end
+#   return new
+# end
+
 
 def reduce_to_total(array, starting_point = 0)
   total = starting_point
@@ -48,7 +94,7 @@ end
 
 
 def reduce_to_any_true(array)
-# this method returns false when no truthy values are present, and returns true if their are any truthy values present 
+# this method returns false when no truthy values are present, and returns true if their are any truthy values present
   counter = 0
   while counter < array.size do
     return true if array[counter] == true
